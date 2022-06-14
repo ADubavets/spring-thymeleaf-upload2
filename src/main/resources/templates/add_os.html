@@ -11,16 +11,18 @@
 </head>
 <body>
 <div class="container mt-5" style="width: 30%">
-    <!--/*@thymesVar id="firm" type="firm"*/-->
-    <form method="post" th:action="@{/save_firm}" th:object="${firm}">
+    <!--/*@thymesVar id="firm" type="os"*/-->
+    <form method="post" th:action="@{/save_os}" th:object="${os}">
         <div class="mb-3">
-            <label for="name" class="form-label">Firm</label>
+            <label for="name" class="form-label">OS name</label>
             <input type="text" class="form-control" id="name" th:field="*{name}">
+            <label for="developer" class="form-label">Developer</label>
+            <input type="text" class="form-control" id="developer" th:field="*{developer}">
         </div>
-        <button type="submit" class="btn btn-primary">Add firm</button>
+        <button type="submit" class="btn btn-primary">Add OS</button>
         <button type="reset" class="btn btn-secondary">Reset</button>
     </form>
-    <a href="/list_firm">List firms</a>
+    <a href="/list_os">List OS</a>
 </div>
 
 </body>
